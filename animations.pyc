@@ -1,0 +1,72 @@
+from time import sleep
+from random import randint as r
+
+def procces_animation(text, duration, time_between_progress):
+    time = 0
+    while time < duration:
+        print(f"{text}.", end = "\r", flush = True)
+        sleep(time_between_progress)
+        time += 1
+        print(f"{text}..", end = "\r", flush = True)
+        sleep(time_between_progress)
+        time += 1
+        print(f"{text}...", end = "\r", flush = True)
+        sleep(time_between_progress)
+        time += 1
+        print("          ", end = "\r", flush = True)
+
+def proggressbar(time_between_progress):
+    time = 0
+    print("|               |", end = "\r")
+    sleep(time_between_progress)
+    print("|#              |", end = "\r")
+    sleep(time_between_progress)
+    print("|##             |", end = "\r")
+    sleep(time_between_progress)
+    print("|###            |", end = "\r")
+    sleep(time_between_progress)
+    print("|####           |", end = "\r")
+    sleep(time_between_progress)
+    print("|#####          |", end = "\r")
+    sleep(time_between_progress)
+    print("|######         |", end = "\r")
+    sleep(time_between_progress)
+    print("|#######        |", end = "\r")
+    sleep(time_between_progress)
+    print("|########       |", end = "\r")
+    sleep(time_between_progress)
+    print("|#########      |", end = "\r")
+    sleep(time_between_progress)
+    print("|##########     |", end = "\r")
+    sleep(time_between_progress)
+    print("|###########    |", end = "\r")
+    sleep(time_between_progress)
+    print("|############   |", end = "\r")
+    sleep(time_between_progress)
+    print("|#############  |", end = "\r")
+    sleep(time_between_progress)
+    print("|############## |", end = "\r")
+    sleep(time_between_progress)
+    print("|###############|", end = "\r")
+    sleep(time_between_progress)
+    
+def spinner(max_amount, time_between_progress):
+    amount = 0
+    while amount < max_amount:
+        print("| ", end = "\r")
+        sleep(time_between_progress)
+        amount += 1
+        print("/ ", end = "\r")
+        sleep(time_between_progress)
+        amount += 1
+        print("- ", end = "\r")
+        sleep(time_between_progress)
+        amount += 1
+        print("\\", end = "\r")
+        sleep(time_between_progress)
+        amount += 1
+
+        
+#spinner(40, 0.2)
+#progressbar(0.2)
+#process_animation("Loading", 5, 1)
